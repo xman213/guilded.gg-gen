@@ -40,16 +40,12 @@ def gen():
     global requests
     global proxies
     while True:
-        if proxystate == "socks5":
-            
-            with open("proxiess.txt", "r") as f:
-                            proxy1 = choice(f.readlines()).strip()
-                            proxies = {'https': f'socks5://RnePIknYGEb:cceFUgMQQIu@{proxy1}:1080'}
-        elif proxystate == "none":
+       
+        if proxystate == "none":
              proxies = {'https': None}
         else:
             
-            with open("proxiess.txt", "r") as f:
+            with open("proxies.txt", "r") as f:
                             proxy1 = choice(f.readlines()).strip()
                             proxies = {'https': f'http://{proxy1}'}
         
